@@ -25,3 +25,28 @@ ydnah dnif yam uoy taht skcirt ro seuqinhcet wef a era erehT
 handy find may you that tricks or techniques few a are There
 erehT era a wef seuqinhcet ro skcirt taht uoy yam dnif ydnah
 """
+
+text = input("Please enter a string of text (the bigger the better): ")
+print('You entered "' + text + '". Now jumble it: ')
+
+#this is the first part of the problem, where all of the letters are in reverse
+textlist = list(text)
+
+reversetextlist = textlist[::-1]
+reversetext = ''.join(reversetextlist)
+
+print(reversetext)
+
+
+#this is the second part, where the words are in reverse but the letters within each word are in order.
+textlist2 = list(text.split())
+
+reversetextlist2 = ' '.join(textlist2[::-1])
+print(reversetextlist2)
+
+
+#this is the third part, where all the words are in order but the letters within each word are reversed
+textlist3 = list(text.split())
+
+for x in textlist3:
+    print(''.join(list(x[::-1])), end=" ")
